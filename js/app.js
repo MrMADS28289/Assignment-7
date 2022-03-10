@@ -1,6 +1,5 @@
 let posts = [];
-
-const likedPostsId = [];
+let likedPostsId = [];
 let reportedPostsId = [];
 
 const getLikedPosts = () => {
@@ -51,7 +50,8 @@ const switchTab = (id) => {
 
     displayReportedPosts();
   }
-  reportedPostsId = []
+  reportedPostsId = [];
+  likedPostsId = [];
 };
 
 const createPost = (post) => {
@@ -159,7 +159,6 @@ const displayReportedPosts = () => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
-
 };
 
 const loadPosts = async () => {
